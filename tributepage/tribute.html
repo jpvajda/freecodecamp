@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title id=title>Free Code Camp Project: Tribute Page</title>
+</head>
+<!--  Layout  -->
+<style type="text/css">
+  #main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    font-family: helvetica, sans-serif;
+    background: rgba(255, 165, 0, .6);
+    grid-template-areas:
+      "image"
+      "content";
+  }
+
+  #img-div {
+    grid-area: image;
+    justify-self: center;
+  }
+
+  #image {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 70%;
+  }
+
+  #tribute-info {
+    grid-area: content;
+    height: auto;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  #img-caption {
+    font-size: 12px;
+    font-family: helvetica, sans-serif;
+    text-align: center;
+    margin-right: 50px;
+  }
+</style>
+
+<!--  Content  -->
+
+<main id="main">
+
+  <body>
+    <div id="img-div">
+      <figure>
+        <img id="image" src="https://iamfearlesssoul.com/wp-content/uploads/2018/04/LAO-TZU-COVER-759x500.jpg"
+          id="image" alt="Lao Tzu">
+        <figcaption id="img-caption">Artist rendering of Lao Tzu</figcaption>
+      </figure>
+    </div>
+    <p id="tribute-info">Laozi, also rendered as <a id="tribute-link" href="https://en.wikipedia.org/wiki/Laozi"
+        target="_blank">Lao Tzu</a> and Lao-Tze, was an ancient Chinese philosopher and writer.
+      He is the reputed author of the Tao Te Ching, the founder of philosophical Taoism, and a
+      deity in religious Taoism and traditional Chinese religions.</p>
+
+  </body>
+</main>
+
+</html>
+
+<!--  Javascript  -->
+<!-- FreeCodeCamp test suite -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
