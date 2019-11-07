@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Free Code Camp Product Landing Page</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+</head>
+
+<!--Layout -->
+
+<style type="text/css">
+
+main { 
+  text-align: center;
+  display: inline block;
+}
+
+header { 
+  display: flex;
+  justify-content: center;
+  
+}
+.logo { 
+ margin: 50px 5px 5px 5px; 
+ border-radius: 50%;
+ border: solid rgba(236, 40, 49, .5);
+ display: flex;
+} 
+
+ body { 
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  background: rgba(145, 43, 144, .6);
+  display: flex;
+  flex-direction: column;
+ }   
+
+.nav-bar { 
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+h1 { 
+ letter-spacing: 1px;
+
+}
+
+.video { 
+  border: solid rgba(236, 40, 49, .5);
+  }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+form { 
+padding: 20px 5px 5px 5px;
+margin: 10px 10px 10px 10px;
+background: rgba(51, 51, 51, 0.5); 
+width: 30%;  
+text-align: center;
+display: inline-block;
+}
+
+
+input[type=submit] { 
+  background-color: rgb(56, 163, 156, 0.6);
+  color: black;
+  border: 4px solid rgba(0, 0, 0, 0.5);
+  width: 15%;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 12px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+
+@media (max-width: 600px) { 
+  
+  .video { 
+    display: none;
+  }
+  
+}
+
+</style>
+
+<!--  Content  -->
+<header id="header">
+    <img id="header-img" class="logo"
+      src="https://dynamic.brandcrowd.com/asset/logo/4c2483bd-6cf9-41bf-a357-d4e3cfe06a18/logo?v=4" alt="company logo">
+  
+    <nav id="nav-bar" class="nav-bar">
+      <ul>
+        <li><a class="nav-link" href="#productinfo">Product Info</a></li>
+        <li><a class="nav-link" href="#releases">Releases</a></li>
+        <li><a class="nav-link" href="#FAQ">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main id="main">
+    <body class="body">
+      <div>
+        <h1 id="productinfo">Product Info</h1>
+        <p>Find out more about or amazing product by watching this video!</p>
+        
+        <video class ="video" id="video" width="520" height="320" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video> 
+      </div>
+      <div>
+        <h1 id="releases">Product Releases</h1>
+        <p>Below are release notes from our iterative product releases.</p>
+      </div>
+      <div>
+        <h1 id="FAQ">FAQ</h1>
+        <p>Interested in signing up for our product? Send us your email address and 
+          we'll be in touch very soon!. 
+        </p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input 
+              name="email"     
+              id="email" 
+              size ="40"
+              type="email"
+              placeholder="Enter email address" 
+              required 
+             />
+              <div class="submit">
+                <input id="submit" name="submit" type="submit" value=Submit/>
+              </div>
+          </form> 
+      </div>
+    </body>
+  </main>
+  
+  </html>
+  
+  <!--  Javascript  -->
+  <!-- FreeCodeCamp test suite -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
