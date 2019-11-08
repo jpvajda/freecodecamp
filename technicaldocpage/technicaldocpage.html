@@ -11,116 +11,263 @@
 <!--Layout -->
 
 <style type="text/css">
-
-body { 
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 1px;
-  background: rgba(65, 184, 181, .5);
-  display: flex;
-  flex-direction: column;
- }   
-
-.navbar { 
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgba(51, 51, 51, 0.8);
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-
-@media (max-width: 600px) { 
-  
-  .video { 
-    display: none;
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: rgba(65, 184, 181, .4);
   }
-  
-}
+
+  .content {
+    margin-left: 220px;
+    padding: 1px 16px;
+    height: 100%;
+    color: #191919;
+  }
+
+  p {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  li {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  code {
+    background-color: rgba(232, 232, 232, 0.6);
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+    display: inline-block;
+    width: 50%;
+  }
+
+  .navheader {
+    text-align: center;
+    font-weight: 900;
+    background: rgba(53, 73, 94, .5);
+    letter-spacing: 1px;
+  }
+
+  /* The side navigation menu */
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    background-color: rgba(241, 241, 241, .5);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    letter-spacing: 1px;
+  }
+
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+
+  .main-header {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.5);
+  }
 
 
+  @media screen and (max-width: 600px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    .sidebar a {
+      float: left;
+    }
+
+    div.content {
+      margin-left: 0;
+    }
+  }
+
+  /* On screens that are less than 600px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 600px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
 </style>
 
 <!--  Content  -->
-<nav id="navbar" class="navbar">
-  <header id="header">Vue.js Technical Documentation</header>
-  <ul>
+<div>
+  <nav id="navbar" class="sidebar">
+    <header id="header" class="navheader">Vue.js Technical Documentation</header>
     <li><a class="nav-link" href="#what_is_vue.js?">What is Vue.js?</a></li>
     <li><a class="nav-link" href="#getting_started">Getting Started</a></li>
     <li><a class="nav-link" href="#declarative_rendering">Declarative Rendering</a></li>
     <li><a class="nav-link" href="#conditional_loops">Conditional Loops</a></li>
     <li><a class="nav-link" href="#handling_user_input">Handling User Input</a></li>
-  </ul>
-</nav>
+  </nav>
+</div>
 
 <main id="main-doc">
-<body>
-  <section class="main-section" id="what_is_vue.js?">
-    <header class="main-header" id="what_is_vue.js?">What is Vue.js?</header>
-    <p></p>
-    <p></p>
 
-    <ol>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ol>
+  <body>
+    <div class="content">
+      <section class="main-section" id="what_is_vue.js?">
+        <header class="main-header" id="what_is_vue.js?">What is Vue.js?</header>
+        <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces.
+          Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable.
+          The core library is focused on the view layer only, and is easy to pick up and integrate with other
+          libraries or existing projects. On the other hand, Vue is also perfectly capable of powering
+          sophisticated Single-Page Applications when used in combination with modern tooling and
+          supporting libraries.</p>
 
-  </section>
+        <p>If you are an experienced frontend developer and want to know how Vue compares to
+          other libraries/frameworks, check out the Comparison with Other Frameworks.</p>
 
-  <section class="main-section" id="getting_started">
-    <header class="main-header" id="getting_atarted">Getting Started</header>
-    <p></p>
-    <p></p>
-  </section>
+        <h2>Vue.js is powerful for the following reasons:</h2>
+
+        <ol>
+          <li>It's easy to spin up a Vue.js site using Vue CLI.</li>
+          <li>Everything you need to get started is available to you on creation.</li>
+          <li>Webpack is easy to work with, no more manually configurations.</li>
+          <li>the Vue community has provided many packages that support rapid development.</li>
+          <li>Vue Components are easy to build maintain and reuse. No more repeat code!</li>
+        </ol>
+
+      </section>
+
+      <section class="main-section" id="getting_started">
+        <header class="main-header" id="getting_atarted">Getting Started</header>
+        <p>The easiest way to try out Vue.js is using the JSFiddle Hello World example.
+          Feel free to open it in another tab and follow along as we go through some basic examples.
+          Or, you can create an index.html file and include Vue with:</p>
+
+        <p>The Installation page provides more options of installing Vue. Note: We do
+          not recommend that beginners start with vue-cli, especially if you are not yet
+          familiar with Node.js-based build tools.
+
+          <p>If you prefer something more interactive, you can also check out this
+            tutorial series on Scrimba, which gives you a mix of screencast and
+            code playground that you can pause and play around with anytime.</p>
+      </section>
 
 
-  <section class="main-section" id="declarative_rendering">
-    <header class="main-header" id="declarative_rendering">Declarative Rendering</header>
-    <p></p>
-    <p></p>
-    <code></code>
-    <code></code>
-  </section>
+      <section class="main-section" id="declarative_rendering">
+        <header class="main-header" id="declarative_rendering">Declarative Rendering</header>
+        <p>At the core of Vue.js is a system that enables us to declaratively render data to the
+          DOM using straightforward template syntax:</p>
 
-  <section class="main-section" id="conditional_loops">
-    <header class="main-header" id="conditional_loops">Conditional Loops</header>
-    <p></p>
-    <p></p>
-    <code></code>
-    <code></code>
-  </section>
+        <code>
+           id="app">
+          {{ message }}
+      </code>
 
-  <section class="main-section" id="handling_user_input">
-    <header class="main-header" id="handling_user_input">Handling User Input</header>
-    <p></p>
-    <p></p>
-    <code></code>
-    <code></code>
-  </section>
+        <code>
+                var app = new Vue({
+                  el: '#app',
+                  data: {
+                    message: 'Hello Vue!'
+                  }
+                })
+            </code>
 
+        <p>We have already created our very first Vue app! This looks pretty similar
+          to rendering a string template, but Vue has done a lot of work under the hood.
+          The data and the DOM are now linked, and everything is now reactive. How do we
+          know? Open your browser’s JavaScript console (right now, on this page) and
+          set app.message to a different value. You should see the rendered example
+          above update accordingly.</p>
+
+      </section>
+
+      <section class="main-section" id="conditional_loops">
+        <header class="main-header" id="conditional_loops">Conditional Loops</header>
+        <p>It’s easy to toggle the presence of an element, too:</p>
+
+        <code>
+        <div id="app-3">
+            <span v-if="seen">Now you see me</span>
+          </div>
+    </code>
+
+
+        <code>
+      var app3 = new Vue({
+        el: '#app-3',
+        data: {
+          seen: true
+        }
+      })
+  </code>
+
+        <p>Go ahead and enter app3.seen = false in the console.
+          You should see the message disappear.</p>
+
+        <p>This example demonstrates that we can bind data to not only text and attributes,
+          but also the structure of the DOM. Moreover, Vue also provides a powerful
+          transition effect system that can automatically
+          apply transition effects when elements are inserted/updated/removed by Vue.</p>
+
+        <p>There are quite a few other directives, each with its own special functionality.
+          For example, the v-for directive can be used for displaying a
+          list of items using the data from an Array:</p>
+      </section>
+
+      <section class="main-section" id="handling_user_input">
+        <header class="main-header" id="handling_user_input">Handling User Input</header>
+        <p>To let users interact with your app, we can use the v-on
+          directive to attach event listeners that invoke methods on our Vue instances:</p>
+
+        <code>
+    div id="app-5"
+      {{ message }}
+      button v-on:click="reverseMessage">Reverse Message /button>
+  </code>
+
+
+        <code>
+          var app5 = new Vue({
+            el: '#app-5',
+            data: {
+              message: 'Hello Vue.js!'
+            },
+            methods: {
+              reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('')
+              }
+            }
+          })
+        </code>
+
+        <p>Note that in this method we update the state of our app without touching the
+          OM - all DOM manipulations are handled by Vue, and the code you write is
+          focused on the underlying logic.</p>
+
+      </section>
+    </div>
   </body>
 </main>
 

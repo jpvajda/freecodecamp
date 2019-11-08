@@ -7,3 +7,4 @@ This repo contains my free code camp certification projects.
 2. Build a Survey Form [CodePen](https://codepen.io/jpvajda/pen/BaaxybB)
 3. Build a Product Landing Page [Code Pen](https://codepen.io/jpvajda/pen/GRRdwXv)
 4. Build a Technical Documentation Page [Code Pen](https://codepen.io/jpvajda/pen/xxxjoVN)
+5. Build a Personal Portfolio Page [Code Pen](https://codepen.io/jpvajda/pen/rNNKzxN)
