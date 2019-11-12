@@ -3,9 +3,9 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Free Code Camp Personal Portfolio Page</title>
+  <title>Free Code Camp Personal Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 
 </head>
 <!--  Layout  -->
@@ -19,7 +19,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0);
   }
 
   ul {
@@ -37,7 +36,8 @@
 
   li a {
     display: block;
-    color: white;
+    color: black;
+    font-size: 20px; 
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -50,12 +50,31 @@
   main {
     text-align: center;
     display: inline block;
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(4, 7, 40, 0.9)
   }
 
   a {
     color: rgba(178, 0, 0, 0.9);
+  }
+
+  p {
+    line-height: 1.7em;
+  }
+
+  p + p { 
+    margin-top: 12px;
+  }
+
+  .goal {
+    color: rgba(178, 0, 0, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 0px 8px 0px;
+    font-size: 20px;
+    font-weight: 900;
+
   }
 
   h1 {
@@ -66,26 +85,38 @@
     letter-spacing: 1px;
   }
 
-  h3 { 
+  h3 {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
   }
 
+
   .summary {
-    height: 25vh;
-    background-color: rgba(4, 7, 40, 0.9);
+    height: 100%;
+    /* background-color: rgba(4, 7, 40, 0.9); */
     display: grid;
     grid-template-columns: auto;
-    margin-top: 60px;
+    grid-template-rows: auto auto;
+    margin: 60px 0px 40px 0px;
+    grid-template-areas:
+      "title"
+      "cell1";
   }
 
-  .summary-text { 
+  .summary-title {
     display: grid;
+    grid-area: title;
+    margin: 20px 0px 20px 0px;
+  }
+
+  .summary-text {
+    display: grid;
+    grid-area: cell1;
     font-size: 16px;
     font-weight: 200;
     letter-spacing: 2px;
-    width: 60%; 
+    width: 60%;
     justify-self: center;
   }
 
@@ -105,8 +136,7 @@
   }
 
   .projects {
-    height: 50vh;
-    background-color: rgba(4, 7, 40, 0.9);
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
@@ -118,22 +148,22 @@
   .project-title {
     display: grid;
     grid-area: title;
+    margin-top: 20px;
   }
 
   .project-tile {
     display: grid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(255, 255, 255, 0.19);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(178, 0, 0, 0.6);
     width: auto;
     height: auto;
     padding: 2px 16px;
-    margin: 2px 12px 2px 12px;
-    border: dotted 1px white;
+    margin: 40px 12px 40px 12px;
+    border: dotted 1px rgba(178, 0, 0, 0.6);
   }
 
   .references {
     display: grid;
-    height: 50vh;
-    background-color: rgba(4, 7, 40, 0.9);
+    height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
@@ -144,24 +174,24 @@
   .references-title {
     display: grid;
     grid-area: title;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .references-tile {
     display: grid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(255, 255, 255, 0.19);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(178, 0, 0, 0.6);
     width: auto;
     height: 100px;
-    padding: 2px 2px 4px 2px;
-    margin: 2px 36px 2px 36px;
-    border: dotted 1px white;
+    padding: 12px 4px 12px 4px;
+    margin: 40px 12px 40px 8px;
+    border: dotted 1px rgba(178, 0, 0, 0.6);
   }
 
   .certs {
     display: grid;
-    height: 50vh;
+    height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background-color: rgba(4, 7, 40, 0.9);
+    /* background-color: rgba(4, 7, 40, 0.9); */
     grid-template-rows: auto auto;
     grid-template-areas:
       "title title title title title"
@@ -169,19 +199,19 @@
   }
 
   .certs-title {
-      display: grid;
-      grid-area: title;
-      margin-top: 40px;
-    }
-
-    .certs-tile {
     display: grid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(255, 255, 255, 0.19);
+    grid-area: title;
+    margin-top: 20px;
+  }
+
+  .certs-tile {
+    display: grid;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(178, 0, 0, 0.6);
     width: auto;
     height: 160px;
-    padding: 2px 2px 4px 2px;
-    margin: 2px 36px 2px 36px;
-    border: dotted 1px white;
+    padding: 12px 4px 12px 4px;
+    margin: 40px 12px 40px 8px;
+    border: dotted 1px rgba(178, 0, 0, 0.6);
   }
 
 
@@ -191,61 +221,70 @@
 <!--  Content  -->
 <main>
 
-    <nav id=navbar class="navbar">
-        <li><a class="nav-link" href="#summary">/summary</a></li>
-        <li><a class="nav-link" href="#projects">/projects</a></li>
-        <li><a class="nav-link" href="#references">/references</a></li>
-        <li><a class="nav-link" href="#contact">/contact</a></li>
-      </nav>
+  <nav id=navbar class="navbar">
+    <li><a class="nav-link" href="#summary">/Summary</a></li>
+    <li><a class="nav-link" href="#projects">/Projects</a></li>
+    <li><a class="nav-link" href="#references">/References</a></li>
+    <li><a class="nav-link" href="#contact">/Contact</a></li>
+  </nav>
 
 
   <body>
     <section id="summary" class="summary">
-      <h1>{ Summary }</h1>
-    <div class="summary-text">
-      <p>I'm a currently looking for a role that will help me balance my passions 
-        for Product Management and Engineering. I have years of technical project and 
-        technical product management under my belt, and over the last 3 years been 
-        investing heavily in sharping my developer / engineering skill set. 
-        
-        <p>My goal: to become a great product leader who is also a great 
-          software engineer.</p> 
+      <h1 class="summary-title">{ Summary }</h1>
+      <div class="summary-text">
+        <p>I'm a currently looking for a role that will help me balance my passions
+          for Product Management and Engineering. I have years of technical project and
+          technical product management under my belt, and over the last 3 years been
+          investing heavily in sharping my developer / engineering skill set.
+
+          <p class="goal">My goal: to become a great product leader who is also a great
+            software engineer.</p>
+
+          <p></p>To say I love empowering developers to build cool things is an understatement.
+          Great documentation, amazing code libraries, and awesome developer support enables
+          creative people to do amazing things with your software. I love seeing a
+          community grow and use a product to solve their own developer challenges.
           
-        <p>I believe in open source,  transparency in code, and clarity in design and 
-        documentation. I possess an insatiable appetite to learn, and ability to 
-        learn quickly and love for coding that goes beyond words.</p>
-      </div> 
+          <p>I love talking to developers about products and seeing their eyes and brains
+            light up when a particular solution solves a key problem they are facing.
+            Making their lives easier makes me happy.</p>
+
+          <p>I believe in open source, transparency in code, and clarity in design and
+            documentation. I possess an insatiable appetite to learn, and ability to
+            learn quickly and love for coding that goes beyond words.</p>
+      </div>
     </section>
 
     <section id="projects" class="projects">
       <h1 class="project-title">{ Projects }</h1>
 
       <div class="project-tile">
-        <a href="https://codepen.io/jpvajda/pen/eYYrOJe"> <img class="code-image" 
-            src="assets/code-image.png"
-            alt="CodeImage" target=_blank></a>
-          <h3>FCC: Tribute Page</h3>
+        <a href="https://codepen.io/jpvajda/pen/eYYrOJe"> <img class="code-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/code-image.png" alt="CodeImage"
+            target=_blank></a>
+        <h3>FCC: Tribute Page</h3>
       </div>
 
       <div class="project-tile">
-          <a href="https://codepen.io/jpvajda/pen/Baaxyb"> <img class="code-image" 
-            src="assets/code-image.png"
-            alt="CodeImage" target=_blank></a>
-          <h3>FCC:Survey Form</h3>
+        <a href="https://codepen.io/jpvajda/pen/BaaxybB"> <img class="code-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/code-image.png" alt="CodeImage"
+            target=_blank></a>
+        <h3>FCC:Survey Form</h3>
       </div>
 
       <div class="project-tile">
-          <a href="https://codepen.io/jpvajda/pen/GRRdwXv"> <img class="code-image" 
-            src="assets/code-image.png"
-            alt="CodeImage" target=_blank></a>
-          <h3>FCC:Product Landing</h3>
+        <a href="https://codepen.io/jpvajda/pen/GRRdwXv"> <img class="code-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/code-image.png" alt="CodeImage"
+            target=_blank></a>
+        <h3>FCC:Product Landing</h3>
       </div>
 
       <div class="project-tile">
-          <a href="https://codepen.io/jpvajda/pen/rNNKzxN"> <img class="code-image" 
-            src="assets/code-image.png"
-            alt="CodeImage" target=_blank></a>
-          <h3>FCC:Technical Documentation</h3>
+        <a href="https://codepen.io/jpvajda/pen/xxxjoVN"> <img class="code-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/code-image.png" alt="CodeImage"
+            target=_blank></a>
+        <h3>FCC:Technical Documentation</h3>
       </div>
     </section>
 
@@ -253,38 +292,38 @@
       <h1 class="references-title">{ References }</h1>
 
       <div class="references-tile">
-          <a href="https://www.freecodecamp.org/jpvajda"> <img class="link-image" 
-            src="assets/link-image.png"
-            alt="LinkImage" target=_blank></a>
-          <h3>Free Code Camp</h3>
+        <a href="https://www.freecodecamp.org/jpvajda"> <img class="link-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/link-image.png" alt="LinkImage"
+            target=_blank></a>
+        <h3>Free Code Camp</h3>
       </div>
 
       <div class="references-tile">
-          <a href="https://github.com/jpvajda"> <img class="link-image" 
-            src="assets/link-image.png"
-            alt="LinkImage" target=_blank></a>
-          <h3>Github</h3>
+        <a href="https://github.com/jpvajda"> <img class="link-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/link-image.png" alt="LinkImage"
+            target=_blank></a>
+        <h3>Github</h3>
       </div>
 
       <div class="references-tile">
-          <a href="https://gitlab.com/johnpvajda"> <img class="link-image" 
-            src="assets/link-image.png"
-            alt="LinkImage" target=_blank></a>
-          <h3>Gitlab</h3>
+        <a href="https://gitlab.com/johnpvajda"> <img class="link-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/link-image.png" alt="LinkImage"
+            target=_blank></a>
+        <h3>Gitlab</h3>
       </div>
 
       <div class="references-tile">
-          <a href="https://www.codewars.com/users/kratos0"> <img class="link-image" 
-            src="assets/link-image.png"
-            alt="LinkImage" target=_blank></a>
-          <h3>CodeWars</h3>
+        <a href="https://www.codewars.com/users/kratos0"> <img class="link-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/link-image.png" alt="LinkImage"
+            target=_blank></a>
+        <h3>CodeWars</h3>
       </div>
 
       <div class="references-tile">
-          <a href="https://www.linkedin.com/in/johnpvajda"> <img class="link-image" 
-            src="assets/link-image.png"
-            alt="LinkImage" target=_blank></a>
-          <h3>Linkedin</h3>
+        <a href="https://www.linkedin.com/in/johnpvajda"> <img class="link-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/link-image.png" alt="LinkImage"
+            target=_blank></a>
+        <h3>Linkedin</h3>
       </div>
 
     </section>
@@ -293,10 +332,19 @@
       <h1 class="certs-title">{ Certifications }</h1>
 
       <div class="certs-tile">
-          <a href="https://www.freecodecamp.org/certification/jpvajda/responsive-web-design"> 
-            <img class="cert-image" src="assets/certification-image.png"
-            alt="CertImage" target=_blank></a>
-          <h3>FFC: Responsive Web Design Certification</h3>
+        <a href="https://www.freecodecamp.org/certification/jpvajda/responsive-web-design">
+          <img class="cert-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/certification-image.png" alt="CertImage"
+            target=_blank></a>
+        <h3>FFC: Responsive Web Design Certification</h3>
+      </div>
+
+      <div class="certs-tile">
+        <a href="">
+          <img class="cert-image"
+            src="https://portfolio-images123456789.s3-us-west-1.amazonaws.com/certification-image.png" alt="CertImage"
+            target=_blank></a>
+        <h3>FFC: More to Come!</h3>
       </div>
 
     </section>
