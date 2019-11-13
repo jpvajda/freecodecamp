@@ -4,212 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Free Code Camp Personal Portfolio</title>
-
+  <link href="portfoliopage.css" rel="stylesheet" type="text/css" media="all">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-
 </head>
-<!--  Layout  -->
-<style type="text/css">
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: white;
-  }
-
-  li {
-    float: left;
-    list-style-type: none;
-  }
-
-  li a {
-    display: block;
-    color: black;
-    font-size: 20px; 
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  li a:hover {
-    background-color: rgba(178, 0, 0, 0.6);
-  }
-
-  main {
-    text-align: center;
-    display: inline block;
-    font-family: 'Roboto Mono', monospace;
-    color: rgba(255, 255, 255, 0.9);
-    background-color: rgba(4, 7, 40, 0.9)
-  }
-
-  a {
-    color: rgba(178, 0, 0, 0.9);
-  }
-
-  p {
-    line-height: 1.7em;
-  }
-
-  p + p { 
-    margin-top: 12px;
-  }
-
-  .goal {
-    color: rgba(178, 0, 0, 0.6);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 8px 0px 8px 0px;
-    font-size: 20px;
-    font-weight: 900;
-
-  }
-
-  h1 {
-    font-size: 48px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.9);
-    letter-spacing: 1px;
-  }
-
-  h3 {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
-
-
-  .summary {
-    height: 100%;
-    /* background-color: rgba(4, 7, 40, 0.9); */
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    margin: 60px 0px 40px 0px;
-    grid-template-areas:
-      "title"
-      "cell1";
-  }
-
-  .summary-title {
-    display: grid;
-    grid-area: title;
-    margin: 20px 0px 20px 0px;
-  }
-
-  .summary-text {
-    display: grid;
-    grid-area: cell1;
-    font-size: 16px;
-    font-weight: 200;
-    letter-spacing: 2px;
-    width: 60%;
-    justify-self: center;
-  }
-
-  .code-image {
-    width: 250px;
-    height: 250px;
-  }
-
-  .link-image {
-    width: 75px;
-    height: 75px;
-  }
-
-  .cert-image {
-    width: 75px;
-    height: 75px;
-  }
-
-  .projects {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "title title title title"
-      "cell1 cell2 cell3 cell4";
-  }
-
-  .project-title {
-    display: grid;
-    grid-area: title;
-    margin-top: 20px;
-  }
-
-  .project-tile {
-    display: grid;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(178, 0, 0, 0.6);
-    width: auto;
-    height: auto;
-    padding: 2px 16px;
-    margin: 40px 12px 40px 12px;
-    border: dotted 1px rgba(178, 0, 0, 0.6);
-  }
-
-  .references {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "title title title title title"
-      "cell1 cell2 cell3 cell4 cell5"
-  }
-
-  .references-title {
-    display: grid;
-    grid-area: title;
-    margin-top: 20px;
-  }
-
-  .references-tile {
-    display: grid;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(178, 0, 0, 0.6);
-    width: auto;
-    height: 100px;
-    padding: 12px 4px 12px 4px;
-    margin: 40px 12px 40px 8px;
-    border: dotted 1px rgba(178, 0, 0, 0.6);
-  }
-
-  .certs {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* background-color: rgba(4, 7, 40, 0.9); */
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "title title title title title"
-      "cell1 cell2 cell3 cell4 cell5"
-  }
-
-  .certs-title {
-    display: grid;
-    grid-area: title;
-    margin-top: 20px;
-  }
-
-  .certs-tile {
-    display: grid;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(178, 0, 0, 0.6);
-    width: auto;
-    height: 160px;
-    padding: 12px 4px 12px 4px;
-    margin: 40px 12px 40px 8px;
-    border: dotted 1px rgba(178, 0, 0, 0.6);
-  }
-
-
-  @media screen and (max-width: 600px) {}
-</style>
 
 <!--  Content  -->
 <main>
@@ -218,12 +15,47 @@
     <li><a class="nav-link" href="#summary">/Summary</a></li>
     <li><a class="nav-link" href="#projects">/Projects</a></li>
     <li><a class="nav-link" href="#references">/References</a></li>
-    <li><a class="nav-link" href="#contact">/Contact</a></li>
+    <li><a class="nav-link" id="contactModal">/Contact</a></li>
   </nav>
 
 
   <body>
+    <section id="Modal">
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Send me your info!</h2>
+          </div>
+          <div class="modal-body">
+            <form id="contact-form">
+              <div class="div">
+                <label id="name-label" for="name">Name</label>
+                <input id="name" type="text" placeholder="Enter your name" required>
+              </div>
+
+              <div class="div">
+                <label id="email-label" for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter email address" required>
+              </div>
+
+              <div class="submit">
+                <input id="submit" name="submit" type="submit" value=Submit>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <h3>Thank you!</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="summary" class="summary">
+
       <h1 class="summary-title">{ Summary }</h1>
       <div class="summary-text">
         <p>I'm a currently looking for a role that will help me balance my passions
@@ -238,7 +70,7 @@
           Great documentation, amazing code libraries, and awesome developer support enables
           creative people to do amazing things with your software. I love seeing a
           community grow and use a product to solve their own developer challenges.
-          
+
           <p>I love talking to developers about products and seeing their eyes and brains
             light up when a particular solution solves a key problem they are facing.
             Making their lives easier makes me happy.</p>
@@ -339,9 +171,10 @@
             target=_blank></a>
         <h3>FFC: More to Come!</h3>
       </div>
-
     </section>
 
+    <script src="portfoliopage.js"></script>
+    
   </body>
 </main>
 
