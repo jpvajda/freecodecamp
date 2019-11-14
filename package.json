@@ -4,9 +4,11 @@
     "prettier-eslint": "^9.0.0",
     "prettier-eslint-cli": "^5.0.0"
   },
-
   "scripts": {
     "format": "prettier-eslint —eslint-config-path ./.eslintrc.js --write '**/*.js'",
     "lint": "eslint . —ext .js"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
   }
 }

@@ -12,13 +12,12 @@
 <main>
 
   <nav id=navbar class="navbar">
-    <li><a class="nav-link" href="#summary">/Summary</a></li>
-    <li><a class="nav-link" href="#projects">/Projects</a></li>
-    <li><a class="nav-link" href="#references">/References</a></li>
-    <li><a class="nav-link" id="contactModal">/Contact</a></li>
+    <li><a href="#summary">/Summary</a></li>
+    <li><a href="#projects">/Projects</a></li>
+    <li><a href="#references">/References</a></li>
+    <li><a id="contactModal">/Contact</a></li>
   </nav>
-
-
+  
   <body>
     <section id="Modal">
       <!-- The Modal -->
@@ -30,26 +29,21 @@
             <span class="close">&times;</span>
             <h2>Send me your info!</h2>
           </div>
-          <div class="modal-body">
-            <form id="contact-form">
-              <div class="form-div">
-                <input id="name" type="text" placeholder="Enter your name" required>
-              </div>
 
+          <div class="modal-body">
+            <form id="contact-form" method="post">
+              <div class="form-div">
+                <input id="name" type="text" placeholder="Enter name" required>
+              </div>
               <div class="form-div">
                 <input id="email" type="email" placeholder="Enter email address" required>
               </div>
 
               <div class="form-div">
-                <textarea id="comment" name="comment" type="text" rows="5" cols="33"
-                    placeholder="What do you want to talk about?">
+                <textarea id="comment" name="comment" type="text" rows="5" cols="33">
                   </textarea>
               </div>
-
-              <div class="submit">
-                  <input id="submit" name="submit" type="submit" value=Submit>
-                </div>
-
+              <div class="submit"> <input type="submit" onClick="submitToAPI(event)" value="Submit"></div>
             </form>
           </div>
           <div class="modal-footer">

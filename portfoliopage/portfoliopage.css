@@ -8,6 +8,7 @@
     top: 0;
     width: 100%;
     background-color: white;
+    cursor: pointer;
 }
 
 li {
@@ -259,7 +260,10 @@ h3 {
 }
 
 .modal-body {
+    display: flex;
     padding: 2px 16px;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-footer {
@@ -277,15 +281,21 @@ h3 {
     justify-items: center;
 }
 
+
+.email { 
+    unicode-bidi:bidi-override; 
+    direction: rtl;
+}
+
 input[type=email] {
     width: 60%;
     font-family: 'Roboto Mono', monospace;
     font-size: 16px;
     padding: 12px 20px;
     margin: 8px 0;
-    box-sizing: border-box;
     border: none;
-    border-bottom: 4px dotted rgba(4, 7, 40, 0.9);
+    box-sizing: border-box;
+    border-bottom: 3px dotted rgba(4, 7, 40, 0.9);
 }
 
 input[type=text] {
@@ -294,9 +304,9 @@ input[type=text] {
     font-family: 'Roboto Mono', monospace;
     font-size: 16px;
     margin: 8px 0;
-    box-sizing: border-box;
     border: none;
-    border-bottom: 4px dotted rgba(4, 7, 40, 0.9);
+    box-sizing: border-box;
+    border-bottom: 3px dotted rgba(4, 7, 40, 0.9);
 }
 
 ::placeholder {
@@ -312,7 +322,7 @@ textarea {
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    border: 4px dotted rgba(4, 7, 40, 0.9);
+    border: 3px dotted rgba(4, 7, 40, 0.9);
 }
 
 input[type=submit] {
