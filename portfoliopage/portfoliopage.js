@@ -24,7 +24,7 @@ window.onclick = function (event) {
     }
 }
 
-// contact us form email integration with AWS
+// contact us form email send integration with AWS Lambda, API Gateway and SES.
 
 function submitToAPI(e) {
     e.preventDefault();
