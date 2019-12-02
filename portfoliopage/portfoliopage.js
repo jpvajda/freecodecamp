@@ -24,7 +24,9 @@ window.onclick = function (event) {
     }
 }
 
-// contact us form email send integration with AWS Lambda, API Gateway and SES.
+// contact us form email send integration with AWS Lambda, API Gateway and SES. 
+// Due to CORS issue using a .gmail.com recipient doesn't actually work but 
+// this is to show the setup and functionality. 
 
 function submitToAPI(e) {
     e.preventDefault();
