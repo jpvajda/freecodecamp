@@ -4,26 +4,48 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <head>
-    <meta>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    </meta>
-    <title> </title>
-    <header> </header>
-    <main>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<meta>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</meta>
+<title> FCC: Quote Machine Project</title>
+<header> </header>
+<main>
 
   <body>
 
-    <div id="like_button_container"></div>
+    <div id="quote-box" class="container">
+      <div class="jumbotron">
+        <div id="text" class="">everything on the page goes in here</div>
+        <div id="author" class=""></div>
+      </div>
+      <div class="btn-group btn-group-lg">
+        <button type="button" id="new-quote" class="btn btn-primary">New Quote</button>
+        <div class="tweetbtn"> 
+            <i class="fab fa-twitter"></i>
+          <a class="btn" id="tweet-quote" href="https://html.com">Click here!</a>
+        </div>
+      </div>
+    
+      
+    </div>
+
+    <!-- <button><a href=”#some-link”>only this text will be a link</a></button>
+    <a href=”some-link”><button>the whole area of this button will be a link</button></a> -->
+
+    <!-- <div id="like_button_container"></div> -->
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-    <!-- Load our React component. -->
-    <script src="like_button.js"></script>
+    <!-- Load React components. -->
+
+    <!-- <script src="like_button.js"></script> -->
 
     <!-- Load JQuery, Popper & Bootstrap -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -42,7 +64,7 @@
 
 
   </body>
-  </main>
-  <footer></footer>
+</main>
+<footer></footer>
 
 </html>
