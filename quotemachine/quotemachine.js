@@ -1,24 +1,30 @@
 // quote generator code
 
-$(document).ready(function(){
-  getNewQuote();
-});
+const newQuoteButton = document.querySelector('#new-quote');
+newQuoteButton.addEventListener('click', getQuote);
 
- $(".quote-btn").click(function(){
-   getNewQuote();
- });
+const endpoint = 'http://quotes.stormconsultancy.co.uk/random.json';
 
- function getNewQuote(){
-   $.ajax({
-  type: 'GET',
-  dataType: 'json',
-   cache: false,
-  url: 'http://quotes.stormconsultancy.co.uk/random.json',
-  success: function(data){
-    $(".quote").show();
-    $(".author-name").show();
-    $(".text").html(data.quote + "<br>");
-    $(".author-name").html(data.author);
-  }
-});   
-  }
+function getQuote() {
+  fetch(endpoint)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      displayQuote(data.quote, data.author);
+      // console.log(data.quote, data.author);
+    })
+    .catch(function () {
+      console.log("An error occurred.")
+    });
+};
+
+function displayQuote(quote, author) {
+  const quoteText = document.querySelector('#text');
+  const quoteAuthor = document.querySelector('#author');
+  quoteText.textContent = quote;
+  quoteAuthor.textContent = author;
+};
+
+
+
