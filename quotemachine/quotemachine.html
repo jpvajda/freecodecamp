@@ -25,29 +25,33 @@
 
     <div id="quote-box" class="container">
       <div class="jumbotron">
-        <div id="text" class="">everything on the page goes in here</div>
-        <div id="author" class=""></div>
+          <div id="cloud-circle"></div>
+          <svg width="0" height="0"> 
+            <filter id="filter">
+              <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+              <feDisplacementMap in="SourceGraphic" scale="180" />
+            </filter>
+        </svg>
+        <div id="text" class="quote"></div>
+       <div>
+        <div id="author" class="author-name"><span>-</span></div>
+      </div>  
       </div>
 
       <div class="btn-group">
-        <div class="quotebtn">
-          <a class="btn btn-primary buttonbkg" id="new-quote">
-            <i class="fas fa-comment"></i>Quote</a>
+        <div class="quote-btn">
+          <a class="btn btn-primary" id="new-quote">
+            <i class="fas fa-comment" style="margin-right:5px"></i>Quote</a>
         </div>
 
-        <div class="tweetbtn">
-          <a class="btn btn-primary buttonbkg" id="tweet-quote" href="https://html.com">
+        <div class="tweet-btn">
+          <a class="btn btn-primary" id="tweet-quote" href="">
             <i class="fab fa-twitter-square"></i> Tweet</a>
         </div>
       </div>
     </div>
 
     </div>
-
-    <!-- <button><a href=”#some-link”>only this text will be a link</a></button>
-    <a href=”some-link”><button>the whole area of this button will be a link</button></a> -->
-
-    <!-- <div id="like_button_container"></div> -->
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->

@@ -1,4 +1,4 @@
-/* starter file for css  */
+/* bootstrap CSS override section  */
 
 .jumbotron { 
   margin-top: 20px;
@@ -8,23 +8,42 @@
   width: 100%;
   font-size: 40px;
   font-weight: 400;
-  background: rgba(43, 145, 127, 0.8);
+  background-color: rgba(45, 210, 210, 0.5) !important;
 }
 
-.tweetbtn { 
+.author-name { 
+  text-align: right;
+  font-size: 24px;
+  margin-top: 16px;
+}
+
+.tweet-btn { 
   margin-left: 10px; 
   color:white;
 }
 
-.quotebtn { 
+.quote-btn { 
   color: white; 
 }
 
-.buttonbkg { 
-  background: rgba(28, 40, 39, 0.8);
-  border: none;
+.btn-primary { 
+  background-color: rgba(28, 40, 39, 0.8) !important;
+  border: none !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active{ 
-  background: rgba(176, 180, 180, 0.8);
+  background-color: rgba(176, 180, 180, 0.8) !important;
+}
+
+/* Cloud CSS */
+
+#cloud-circle {
+  width: 100%;
+  height: 200px;
+  border-radius: 50%;
+  filter: url(#filter);
+  box-shadow: 400px 400px 60px 0px #fff;
+  position: relative;
+  top: -400px;
+  left: -420px;
 }
