@@ -1,1 +1,30 @@
 /* starter file for css  */
+
+.jumbotron { 
+  margin-top: 20px;
+  font-family: 'Solway', serif;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 400;
+  background: rgba(43, 145, 127, 0.8);
+}
+
+.tweetbtn { 
+  margin-left: 10px; 
+  color:white;
+}
+
+.quotebtn { 
+  color: white; 
+}
+
+.buttonbkg { 
+  background: rgba(28, 40, 39, 0.8);
+  border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active{ 
+  background: rgba(176, 180, 180, 0.8);
+}
