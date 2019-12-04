@@ -13,7 +13,10 @@
   <link href="quotemachine.css" rel="stylesheet" type="text/css" media="all">
 
   <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
 <meta>
@@ -28,17 +31,17 @@
 
     <div id="quote-box" class="container">
       <div class="jumbotron">
-          <div id="cloud-circle"></div>
-          <svg width="0" height="0"> 
-            <filter id="filter">
-              <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
-              <feDisplacementMap in="SourceGraphic" scale="180" />
-            </filter>
+        <div id="cloud-circle"></div>
+        <svg width="0" height="0">
+          <filter id="filter">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+            <feDisplacementMap in="SourceGraphic" scale="180" />
+          </filter>
         </svg>
         <div id="text" class="text"></div>
-       <div>
-        <div id="author"class="author-name"></div>
-      </div>  
+        <div>
+          <div id="author" class="author-name"></div>
+        </div>
       </div>
 
       <div class="btn-group">
@@ -56,14 +59,13 @@
 
     </div>
 
-      <!-- javascript -->
-      <script src ="quotemachine.js"></script>
-
-    <!-- Load FreeCodeCamp test suite -->
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
-
   </body>
 </main>
+
+<!-- javascript -->
+<script src="quotemachine.js"></script>
+
+<!-- Load FreeCodeCamp test suite -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </html>
