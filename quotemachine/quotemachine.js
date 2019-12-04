@@ -3,7 +3,10 @@
 const newQuoteButton = document.querySelector('#new-quote');
 newQuoteButton.addEventListener('click', getQuote);
 
-const endpoint = 'http://quotes.stormconsultancy.co.uk/random.json';
+const tweetQuoteButton = document.querySelector('#tweet-quote');
+tweetQuoteButton.addEventListener('click', tweetQuote);
+
+const endpoint = 'https://quotes.stormconsultancy.co.uk/random.json';
 
 function getQuote() {
   fetch(endpoint)
@@ -27,4 +30,11 @@ function displayQuote(quote, author) {
 };
 
 
+function tweetQuote(quote){ 
+  const quoteText = document.querySelector('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text='+ 
+  encodeURIComponent('"' + quote + '" ' + author));
+  quoteText.textContent = quote;
+  
+ 
 
+};
