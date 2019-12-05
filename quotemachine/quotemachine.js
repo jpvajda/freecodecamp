@@ -24,12 +24,15 @@ function displayQuote(quote, author) {
   quoteText.textContent = quote;
   quoteAuthor.textContent = author;
 
-   // Tweet button functionality
+  // Tweet button functionality
 
-  $('#tweet-quote').click(function() {
-    $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + quote + author);
+  $('#tweet-quote').on("click", function () {
+    var textToTweet = quote + author;
+    var twtLink = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(textToTweet);
+    window.open(twtLink, '_blank');
+
   });
-
 };
+
 
 

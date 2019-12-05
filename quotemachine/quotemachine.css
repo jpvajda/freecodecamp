@@ -1,5 +1,9 @@
-
 /* bootstrap CSS override section  */
+
+body { 
+  background-color: rgba(145, 43, 144, 0.8) !important;
+}
+
 .jumbotron { 
   margin-top: 20px;
   font-family: 'Solway', serif;
@@ -38,12 +42,12 @@
 /* Cloud CSS */
 
 #cloud-circle {
-  width: 100%;
+  width: 90%;
   height: 200px;
   border-radius: 50%;
   filter: url(#filter);
   box-shadow: 400px 400px 60px 0px #fff;
   position: relative;
   top: -400px;
-  left: -420px;
+  left: -340px;
 }

@@ -8,3 +8,8 @@ This repo contains my free code camp certification projects.
 3. Build a Product Landing Page [Code Pen](https://codepen.io/jpvajda/pen/GRRdwXv)
 4. Build a Technical Documentation Page [Code Pen](https://codepen.io/jpvajda/pen/xxxjoVN)
 5. Build a Personal Portfolio Page [Code Pen](https://codepen.io/jpvajda/pen/rNNKzxN)
+
+## Front End Library Projects 
+
+1. Build a Quote Machine [CodePen](https://codepen.io/jpvajda/pen/ExaxeYL)
+2. Build a Markdown Previewer [CodePen]()
