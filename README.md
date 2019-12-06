@@ -13,3 +13,4 @@ This repo contains my free code camp certification projects.
 
 1. Build a Quote Machine [CodePen](https://codepen.io/jpvajda/pen/ExaxeYL)
 2. Build a Markdown Previewer [CodePen](https://codepen.io/jpvajda/pen/wvBaWBx)
+3. Build a Drum Machine [CodePen](https://codepen.io/jpvajda/pen/LYEpLvj)
