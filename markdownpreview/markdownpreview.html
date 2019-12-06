@@ -5,33 +5,78 @@
   <!-- CSS  -->
   <link href="markdownpreview.css" rel="stylesheet" type="text/css" media="all">
 
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
   <head>
     <meta>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </meta>
-
     <title> FCC: Markdown Previewer Project</title>
-    <header> </header>
     <main>
 
-        <div class="container-fluid" id="app">
-
-          </div>
   <body>
-    <!-- <textarea name="" id="editor" cols="30" rows="10"></textarea>
-    <div id="preview"></div> -->
+    <div class="editor-grid" id="app"> </div>
+
+    <script type="text/babel">
+
+      class Editor extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            editor: { content: "Hello World\n-----------\n\n Type in some Markdown and try it out!\n\n Types: **bold text** \n\n Blockquotes: > blockquoted text  \n\n Inline Code: `<addr>`  \n\n Code Block: ``` this is javascript! ```\n\n Lists:\n\n  * item1\n  * item2\n  * item3\n\n Headers \n# H1 \n Sub-headers: \n # H2 \n Links: \n [link](www.google.com) \n\n Images: ![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)"}
+          };
+
+          this.onChange = this.onChange.bind(this);
+
+        }
+
+        rawMarkup(raw) {
+          const rawMarkup = marked(raw, { sanitize: true });
+          return { __html: rawMarkup };
+        }
+
+        onChange(event) {
+          const change = this.state.editor;
+          change.content = event.target.value;
+          this.setState({ editor: change })
+        }
+
+        render() {
+          return (
+            <div>
+              <div id="header">Markdown Previewer</div>
+              <div>
+                <textarea id ="editor"
+                  onChange={this.onChange}
+                  value={this.state.editor.content}>
+                </textarea>
+                <div id="preview">
+                  <div id="body"
+                    dangerouslySetInnerHTML={this.rawMarkup(this.state.editor.content)}>
+                  </div>
+                </div>
+              </div>
+            </div>);
+
+        }
+      }
+
+      ReactDOM.render(<Editor />,
+        document.getElementById('app'));
+
+    </script>
 
     <!-- REACT -->
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/16.10.2/umd/react.development.js"></script>
-    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.10.2/umd/react-dom.development.js"></script>
+    <script crossorigin
+      src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.10.2/umd/react-dom.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+
 
     <!-- MARKDOWN LIBRARY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.js"></script>
-
-    <!-- javascript -->
-    <script src="markdownpreview.js"></script>
 
     <!-- Load FreeCodeCamp test suite -->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
