@@ -1,1 +1,31 @@
 /* Starter CSS FILE */
+
+.drum-machine { 
+  display: grid;
+  font-family: 'Oswald', sans-serif;
+  grid-template-columns: 20% 20% 20%;
+  grid-template-rows: auto auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-areas: 
+  ".    T1   . " 
+  "Q    W    E"
+  "A    S    D"
+  "Z    X    C";
+  background-color: rgba(9, 42, 42, 0.5);
+}
+
+.title { 
+  display: grid;
+  justify-self: center;
+  grid-area: T1;
+  font-size: 70px;
+}
+
+.drum-pad { 
+  display: grid;
+  border: solid 4px rgba(178, 0, 0, 0.6);
+  justify-self: center;
+  width: 20%;
+  height: 100%;
+}
