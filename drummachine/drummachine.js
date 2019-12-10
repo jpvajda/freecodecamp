@@ -1,5 +1,3 @@
-// Starter JS file
-
 const keyBank = [{
   keyCode: 0,
   keyTrigger: 'Q',

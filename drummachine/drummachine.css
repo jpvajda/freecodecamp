@@ -1,31 +1,45 @@
-/* Starter CSS FILE */
+
+body {
+  display: grid;
+  background: linear-gradient(to left, #413583 , #ff9068);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Oswald', sans-serif;
+  justify-items: center;
+  align-items: center;
+}
 
 .drum-machine { 
   display: grid;
-  font-family: 'Oswald', sans-serif;
-  grid-template-columns: 20% 20% 20%;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   grid-template-areas: 
-  ".    T1   . " 
+  "T1   T1   T1 " 
   "Q    W    E"
   "A    S    D"
   "Z    X    C";
-  background-color: rgba(9, 42, 42, 0.5);
+  text-align: center;
 }
 
 .title { 
   display: grid;
-  justify-self: center;
   grid-area: T1;
-  font-size: 70px;
+  font-size: 80px;
+  text-align: center;
+  color: white;
 }
 
 .drum-pad { 
   display: grid;
   border: solid 4px rgba(178, 0, 0, 0.6);
   justify-self: center;
-  width: 20%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+  box-shadow: 0 8px 6px -6px black;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
 }
