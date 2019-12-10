@@ -13,14 +13,15 @@ body {
 .drum-machine { 
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   grid-template-areas: 
   "T1   T1   T1 " 
   "Q    W    E"
   "A    S    D"
-  "Z    X    C";
+  "Z    X    C"
+  "S1   S1   S1";
   text-align: center;
 }
 
@@ -42,4 +43,25 @@ body {
   box-shadow: 0 8px 6px -6px black;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
+}
+ 
+.drum-pad:hover {
+  background-color: rgba(178, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.drum-pad:active {
+  background-color: darken(#444, 10%);
+  transform: scale(1.1);
+  transition: all .2s;
+}
+
+.sound-type { 
+  display: grid;
+  grid-area: S1;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 8px 6px -6px black;
 }
