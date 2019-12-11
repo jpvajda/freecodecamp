@@ -19,6 +19,7 @@ body {
 .calculator-body {
   max-width: 400px;
   margin: auto;
+  border: solid black;
 }
 
 .button {
