@@ -1,71 +1,58 @@
-
-let num1 = '';
-let num2 = '';
-let operator = '';
-let total = '';
-
-$(document).ready(function () {
-  $('button').on('click', function (e) {
-    let btn = e.target.innerHTML;
-    if (btn >= '0' && btn <= '9') {
-      handleNumber(btn);
-    } else {
-      handleOperator(btn);
+$(document).ready(function() {
+  var result = 0;
+  var prevEntry = 0;
+  var operation = null;
+  var currentEntry = '0';
+  updateScreen(result);
+  
+  $('button').on('click', function(evt) {
+    var buttonPressed = $(this).html();
+    console.log(buttonPressed);
+    
+    if (buttonPressed === "AC") {
+      result = 0;
+      currentEntry = '0';
+    } else if (buttonPressed === "+-") {
+      currentEntry *= -1;
+    } else if (buttonPressed === '.') {
+      currentEntry += '.';
+    } else if (isNumber(buttonPressed)) {
+      if (currentEntry === '0') currentEntry = buttonPressed;
+      else currentEntry = currentEntry + buttonPressed;
+    } else if (isOperator(buttonPressed)) {
+      prevEntry = parseFloat(currentEntry);
+      operation = buttonPressed;
+      currentEntry = '';
+    } else if(buttonPressed === '%') {
+      currentEntry = currentEntry / 100;
+    } else if (buttonPressed === '=') {
+      currentEntry = operate(prevEntry, currentEntry, operation);
+      operation = null;
     }
+    
+    updateScreen(currentEntry);
   });
 });
 
-// function handleNumber(num) {
-handleNumber = (num) => {
-  if (num1 === '') {
-    num1 = num;
-  } else {
-    num2 = num;
-  }
-  displayButton(num)
+updateScreen = function(displayValue) {
+  var displayValue = displayValue.toString();
+  $('.display').html(displayValue.substring(0, 10));
+};
+
+isNumber = function(value) {
+  return !isNaN(value);
 }
 
-// function handleOperator(oper) {
-handleOperator = (oper) => {
-  if (operator === '') {
-    operator = oper;
-  } else {
-    handleTotal();
-    operator = oper;
-  }
-}
+isOperator = function(value) {
+  return value === '/' || value === '*' || value === '+' || value === '-';
+};
 
-// function displayButton(btn) {
-displayButton = (btn) => {
-  $('.display').text(btn);
+operate = function(a, b, operation) {
+  a = parseFloat(a);
+  b = parseFloat(b);
+  console.log(a, b, operation);
+  if (operation === '+') return a + b;
+  if (operation === '-') return a - b;
+  if (operation === '*') return a * b;
+  if (operation === '/') return a / b;
 }
-
-// function handleTotal() { 
-handleTotal = () => {
-  switch (operator) {
-    case '+':
-      total = +num1 + +num2;
-      displayButton(total);
-      break;
-    case '-':
-      total = +num1 - +num2;
-      displayButton(total);
-      break;
-    case '/':
-      total = +num1 / +num2;
-      displayButton(total);
-      break;
-    case 'x':
-      total = +num1 * +num2;
-      displayButton(total);
-      break;
-  }
-    updateVariables();
-}
-
-// function updateVariables() { 
-  updateVariables = () => { 
-    num1 = total;
-    num2 = '';
-}
-
