@@ -1,1 +1,40 @@
-/* CSS Starter file  */
+body { 
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+
+.clock-container { 
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px 200px 100px 100px;
+  grid-template-areas: 
+  "title      title"
+  "clock     clock"
+  "break     session"
+  "controls controls";
+}
+
+
+.clock-title { 
+  font-size: 40px;
+  grid-area: title;
+}
+
+.session-time { 
+  grid-area: clock;
+}
+
+
+.break-length { 
+  grid-area: break;
+}
+
+.session-length { 
+  grid-area: session;
+}
+
+.controls { 
+  
+}
