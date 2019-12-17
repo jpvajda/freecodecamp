@@ -24,6 +24,7 @@ body {
 
 .clock-title {
   font-size: 40px;
+  margin-top: 10px;
   grid-area: title;
   text-align: center;
   border-bottom: 8px dotted rgba(255, 0, 0, 0.7);
@@ -39,17 +40,26 @@ body {
   grid-area: clock;
   text-align: center;
   font-size: 80px;
-  border-bottom: 8px dotted rgba(255, 0, 0, 0.7);
+  align-self: center;
+
+}
+
+.timer-label { 
+ grid-area: clock;
+ text-align: center;
+ font-size: 20px;
 }
 
 .break-length {
   grid-area: break;
   text-align: center;
+  border-bottom: 8px dotted rgba(255, 0, 0, 0.7);
 }
 
 .session-length {
   grid-area: session;
   text-align: center;
+  border-bottom: 8px dotted rgba(255, 0, 0, 0.7);
 }
 
 .time-length { 
@@ -59,9 +69,7 @@ body {
 .controls {
   grid-area: controls;
   text-align: center;
-  border-top: 8px dotted rgba(255, 0, 0, 0.7);
 }
-
 
 button {
   display: inline-block;
@@ -69,7 +77,8 @@ button {
   margin: 6px;
   text-decoration: none;
   background: linear-gradient(to bottom, rgba(202, 202, 204, 1) 0%, rgba(196, 194, 204, 1) 100%);
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 16px;
   width: 25%;
   height: 25%;
   color: red;
