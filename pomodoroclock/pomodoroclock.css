@@ -20,6 +20,7 @@ body {
   "controls controls";
   border: solid 1px white;
   border-radius: 10%;
+  box-shadow: 0 10px 20px rgba(247, 243, 243, 0.19), 0 6px 6px rgba(247, 243, 243, .23);
 }
 
 .clock-title {

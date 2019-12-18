@@ -8,6 +8,7 @@ $(document).ready(function () {
 
   $("#start_stop").click(function (){ 
     var counter = setInterval(timer, 1000);
+    sessionCount*=60;
 
     function timer() { 
       timeCount -= 1;
@@ -16,7 +17,7 @@ $(document).ready(function () {
         clearInterval(counter)
       }
 
-      $("#time-left").html(count);
+      $("#time-left").html(sessionCount);
     }
   });
 
