@@ -4,11 +4,11 @@ $(document).ready(function () {
   var sessionCount = parseInt($("#session-length").html());
   var timeCount = parseInt($("#time-left").html());
 
-  // timer functionality 
+  // timer functionality not currently working....
 
   $("#start_stop").click(function (){ 
     var counter = setInterval(timer, 1000);
-    sessionCount*=60;
+    // sessionCount*=60;
 
     function timer() { 
       timeCount -= 1;
@@ -55,7 +55,16 @@ $(document).ready(function () {
   });
 
 
+  // Reset controls 
 
+  $("#reset").click(function(){
+    sessionCount= 2500;
+    breakCount= 500;
+    $("#break-length").html(breakCount);
+    $("#session-length").html(sessionCount);
+  });
 });
 
 
+// Getting the minutes from total seconds 
+// var minutes = Math.floor(time / 60);
