@@ -4,22 +4,29 @@ $(document).ready(function () {
   var sessionCount = parseInt($("#session-length").html());
   var timeCount = parseInt($("#time-left").html());
 
+
+  console.log(breakCount);
+  console.log(sessionCount);
+  console.log(timeCount);
+
   // timer functionality not currently working....
 
-  $("#start_stop").click(function (){ 
-    var counter = setInterval(timer, 1000);
-    // sessionCount*=60;
-
-    function timer() { 
-      timeCount -= 1;
-      if(timeCount === 0){ 
-        beep.play();
-        clearInterval(counter)
-      }
-
-      $("#time-left").html(sessionCount);
+  $("#start_stop").click(function () {
+    var seconds = 0;
+    var interval;
+    function timer(mins) {
+      seconds = mins * 60 || 0;
+      interval = setInterval(function () {
+        seconds--;
+        if (!seconds) {
+          clearInterval(interval);
+          beep.play();
+        }
+      }, 1000)
     }
+    $("#time-left").html(sessionCount);
   });
+
 
   // break time controls
 
@@ -57,11 +64,13 @@ $(document).ready(function () {
 
   // Reset controls 
 
-  $("#reset").click(function(){
-    sessionCount= 2500;
-    breakCount= 500;
+  $("#reset").click(function () {
+    sessionCount = 25;
+    breakCount = 5;
+    timeCount = 25;
     $("#break-length").html(breakCount);
     $("#session-length").html(sessionCount);
+    $("#time-left").html(timeCount);
   });
 });
 
