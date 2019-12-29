@@ -1,15 +1,37 @@
+
 $(document).ready(function () {
   var beep = $("#beep");
   var breakCount = parseInt($("#break-length").html());
   var sessionCount = parseInt($("#session-length").html());
   var timeCount = parseInt($("#time-left").html());
 
+  //audio beep function 
 
-  console.log(breakCount);
-  console.log(sessionCount);
-  console.log(timeCount);
+  var audio = new Audio('https://www.pacdv.com/sounds/interface_sound_effects/sound113.wav');
+  function beep() {
+    audio.play();
+  }
+
+  // double digit numbers function 
+
+  function pad(val) {
+    return ('00' + val).slice(-2);
+  }
 
   // timer functionality not currently working....
+  
+  
+  // @TODO
+
+  // 1. on click start_stop timer based on SessionRemain variable 
+  // 2. Run timer 
+  // 3. on click of start_stop pause timer, (repeat 1 if clicked again)
+  // 4. allow for clearing of timer and reset back to default SessionRemain 
+  // 5. Time should be shown in MM:SS 
+  // 6. At end of SessionRemain, start break timer using breakRemain variable,
+  // 7. on click of start_stop pause timer, (repeat 6 if clicked again)
+  // 8. allow for clearing of timer and reset back to default BreakRemain 
+  // 9. at the end of both timers, play beep variable audio 
 
   $("#start_stop").click(function () {
     var seconds = 0;
@@ -62,7 +84,7 @@ $(document).ready(function () {
   });
 
 
-  // Reset controls 
+  // reset controls 
 
   $("#reset").click(function () {
     sessionCount = 25;
@@ -73,7 +95,3 @@ $(document).ready(function () {
     $("#time-left").html(timeCount);
   });
 });
-
-
-// Getting the minutes from total seconds 
-// var minutes = Math.floor(time / 60);
