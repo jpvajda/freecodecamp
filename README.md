@@ -1,6 +1,10 @@
 # freecodecamp
 This repo contains my free code camp certification projects. 
 
+## Project Board
+
+[GitHub Project Board](https://github.com/jpvajda/freecodecamp/projects/1)
+
 ## Responsive Web Design Projects 
 
 1. Build a Tribute Page [CodePen](https://codepen.io/jpvajda/pen/eYYrOJe)
@@ -14,6 +18,10 @@ This repo contains my free code camp certification projects.
 1. Build a Quote Machine [CodePen](https://codepen.io/jpvajda/pen/ExaxeYL)
 2. Build a Markdown Previewer [CodePen](https://codepen.io/jpvajda/pen/wvBaWBx)
 3. Build a Drum Machine [CodePen](https://codepen.io/jpvajda/pen/LYEpLvj)
-4. Build a JS Caculator [CodePen](https://codepen.io/jpvajda/pen/yLyOoeW)
+4. Build a JS Calculator [CodePen](https://codepen.io/jpvajda/pen/yLyOoeW)
 5. Build a JS Pomodoro Clock [CodePen](https://codepen.io/jpvajda/pen/zYxKpbG)
 
+
+## APIs & Microservices Projects 
+
+1. Build a Timestamp Microservice [Glitch](https://glitch.com/edit/#!/fcc-microservice-project-jv?path=README.md:1:0)
