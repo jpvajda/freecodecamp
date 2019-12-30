@@ -24,4 +24,4 @@ This repo contains my free code camp certification projects.
 
 ## APIs & Microservices Projects 
 
-1. Build a Timestamp Microservice [Glitch](https://glitch.com/edit/#!/fcc-microservice-project-jv?path=README.md:1:0)
+1. Build a Timestamp Microservice [Glitch](https://fcc-microservice-project-jv.glitch.me)
