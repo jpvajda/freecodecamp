@@ -5,6 +5,12 @@ This repo contains my free code camp certification projects.
 
 [GitHub Project Board](https://github.com/jpvajda/freecodecamp/projects/1)
 
+## Certifications 
+
+[FCC: Responsive Web Design Certification](https://www.freecodecamp.org/certification/jpvajda/responsive-web-design)
+[FCC: JavaScript Algorithms and Data Structures Certification](https://www.freecodecamp.org/certification/jpvajda/javascript-algorithms-and-data-structures)
+[FCC: Front End Libraries Certification](https://www.freecodecamp.org/certification/jpvajda/front-end-libraries)
+
 ## Responsive Web Design Projects 
 
 1. Build a Tribute Page [CodePen](https://codepen.io/jpvajda/pen/eYYrOJe)
