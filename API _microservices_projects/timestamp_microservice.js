@@ -1,6 +1,3 @@
-// Working version of this service can be found here: 
-//https://fcc-microservice-project-jv.glitch.me
-
 // server.js
 // where your node app starts
 
@@ -28,51 +25,19 @@ app.get("/api/hello", function (req, res) {
 });
 
 // GET request to return JSON that formats natural and UNIX dates
-app.get("/api/timestamp/:dateVal", function(req, res, next) { 
+app.get("/api/timestamp/:dateVal?", function(req, res) { 
   
-  // Returns the request data for date 
-  var dateVal = req.params.dateVal;
-  
-  // Date formatting options 
-  var dateFormattingOptions = { 
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  };
-  
-  if (isNaN(dateVal)){ 
-    var naturalDate = new Date(dateVal); 
-    naturalDate = naturalDate.toLocaleDateString("en-us", dateFormattingOptions);
-    var unixDate = new Date(dateVal).getTime()/1000; 
-  }
-  
-  else { 
-    var unixDate = dateVal; 
-    var naturalDate = new Date(dateVal * 1000);
-    naturalDate = naturalDate.toLocaleDateString("en-us", dateFormattingOptions);
-  }
- 
-  
-  res.json({unix: unixDate, natural: naturalDate});
+  let date = new Date();
+  console.log(req.params);
+  if (req.params.dateVal === undefined) {
+    res.json({ unix: date.getTime(), utc: date.toUTCString()});
+  } else if (req.params.dateVal === 'Invalid Date'){ 
+    res.json({ error: 'Invalid Date' })
+  } else {
+    date = Date.parse(req.params.dateVal) ? new Date(req.params.dateVal) : new Date(Number(req.params.dateVal));
+    res.json({unix: date.getTime(), utc: date.toUTCString()});
+  }  
 });
-
-// Added another if statement into the original if statement to check off the third user story 
-// "If it does not contain a date or Unix timestamp, it returns null for those properties"
-
-// if(isNaN(date)){
-//     var naturalDate = new Date(date);
-//     if (naturalDate == "Invalid Date"){
-//       naturalDate = null;
-//       unixDate = null; 
-//     }else{
-//     naturalDate = naturalDate.toLocaleDateString('en-us', format);
-//     var unixDate = new Date(date).getTime()/1000;
-//     }
-//   }else{
-//     var unixDate = date;
-//     var naturalDate = new Date(date *1000);
-//     naturalDate = naturalDate.toLocaleDateString('en-us', format);
-//   }
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
