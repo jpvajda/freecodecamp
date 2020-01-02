@@ -28,18 +28,45 @@ app.get("/api/hello", function (req, res) {
 app.get("/api/timestamp/:dateVal?", function(req, res) { 
   
   let date = new Date();
+  let dateVal = req.params;
   console.log(req.params);
-  if (req.params.dateVal === undefined) {
-    res.json({ unix: date.getTime(), utc: date.toUTCString()});
-  } else if (req.params.dateVal === 'Invalid Date'){ 
-    res.json({ error: 'Invalid Date' })
-  } else {
-    date = Date.parse(req.params.dateVal) ? new Date(req.params.dateVal) : new Date(Number(req.params.dateVal));
-    res.json({unix: date.getTime(), utc: date.toUTCString()});
-  }  
+  
+  // @TODO Switch statement isn't evaluation the 1st 2 cases... 
+  
+  switch(dateVal)
+    { 
+      case 1:
+        req.params.dateVal === undefined
+        res.json({ unix: date.getTime(), utc: date.toUTCString()});
+      break;
+      case 2: 
+        isNaN(req.params.dateVal) 
+        res.json({ error: 'Invalid Date' })
+      break;
+      default: 
+        date = Date.parse(req.params.dateVal) ? new Date(req.params.dateVal) : new Date(Number(req.params.dateVal));
+        res.json({unix: date.getTime(), utc: date.toUTCString()});
+    }    
 });
+
+// Alternative approach using if, else if, else... 
+
+// let date = new Date();
+//   console.log(req.params);
+//   if (req.params.dateVal === undefined) {
+//     res.json({ unix: date.getTime(), utc: date.toUTCString()});
+  
+//   } else if (isNaN(req.params.dateVal)){ 
+//   res.json({ error: 'Invalid Date' })
+    
+//   } else {
+//     date = Date.parse(req.params.dateVal) ? new Date(req.params.dateVal) : new Date(Number(req.params.dateVal));
+//     res.json({unix: date.getTime(), utc: date.toUTCString()});
+//   }  
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+
+
