@@ -25,31 +25,52 @@ app.get("/api/hello", function (req, res) {
 });
 
 // GET request to return JSON that formats natural and UNIX dates
-app.get("/api/timestamp/:dateVal?", function(req, res) { 
-  
-  let date = new Date();
-  let dateVal = req.params;
-  console.log(req.params);
-  
-  // @TODO Switch statement isn't evaluation the 1st 2 cases... 
-  
-  switch(dateVal)
-    { 
-      case 1:
-        req.params.dateVal === undefined
-        res.json({ unix: date.getTime(), utc: date.toUTCString()});
-      break;
-      case 2: 
-        isNaN(req.params.dateVal) 
-        res.json({ error: 'Invalid Date' })
-      break;
-      default: 
-        date = Date.parse(req.params.dateVal) ? new Date(req.params.dateVal) : new Date(Number(req.params.dateVal));
-        res.json({unix: date.getTime(), utc: date.toUTCString()});
-    }    
+
+app.route("/api/timestamp/:date_string?").get((req, res) => {
+  let timestamp =
+    req.params.date_string == null
+      ? new Date(Date.now())
+      : /^[0-9]*$/g.test(req.params.date_string)
+      ? new Date(parseInt(req.params.date_string, 10))
+      : new Date(req.params.date_string);
+  let unixTime = timestamp.getTime();
+  res.json(
+    Number.isNaN(unixTime)
+      ? { error: "Invalid Date" }
+      : { unix: unixTime, utc: timestamp.toUTCString() }
+  );
 });
 
+
+// Different Approaches that didn't work correctly :/
+
+// app.get("/api/timestamp/:dateVal?", function(req, res) { 
+  
+//    let date = new Date();
+//   let dateVal = req.params.dateVal;
+//   console.log(req.params);
+  
+//   // @TODO Switch statement isn't evaluation the 1st 2 cases... 
+  
+//   switch(true)
+//     { 
+//       case 1:
+//         dateVal == null;
+//         return res.json({ unix: date.getTime(), utc: date.toUTCString()});
+    
+//       case 2: 
+//         dateVal.isNaN; 
+//         return res.json({ error: 'Invalid Date' });
+   
+//       default: 
+//         date = Date.parse(dateVal) ? new Date(dateVal) : new Date(Number(dateVal));
+//         return res.json({unix: date.getTime(), utc: date.toUTCString()});
+//     }    
+// });
+
 // Alternative approach using if, else if, else... 
+
+// app.get("/api/timestamp/:dateVal?", function(req, res) { 
 
 // let date = new Date();
 //   console.log(req.params);
