@@ -40,3 +40,4 @@ This repo contains my free code camp certification projects.
 ## Information Security and Quality Assurance Projects
 
 1. Build a metric-imperial converter [Glitch](https://fcc-metric-imperial-converter-jv.glitch.me)
+2. Build an issue tracker [Glitch](https://fcc-issue-traker-jv.glitch.me)
