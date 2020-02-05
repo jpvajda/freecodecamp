@@ -11,6 +11,7 @@ This repo contains my free code camp certification projects.
 - [FCC: JavaScript Algorithms and Data Structures Certification](https://www.freecodecamp.org/certification/jpvajda/javascript-algorithms-and-data-structures)
 - [FCC: Front End Libraries Certification](https://www.freecodecamp.org/certification/jpvajda/front-end-libraries)
 - [FCC: APIs & MicroServices Certification](https://www.freecodecamp.org/certification/jpvajda/apis-and-microservices)
+- [FCC: Information Security and Quality Assurance](https://www.freecodecamp.org/certification/jpvajda/information-security-and-quality-assurance)
 
 ## Responsive Web Design Projects 
 
