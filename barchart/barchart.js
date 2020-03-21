@@ -77,81 +77,117 @@
 
 // example 3 
 
-var data = [80, 100, 56, 120, 180, 30, 40, 120, 160];
+// var data = [80, 100, 56, 120, 180, 30, 40, 120, 160];
 
-var svgWidth = 500, svgHeight = 300;
+// var svgWidth = 500, svgHeight = 300;
 
-var svg3 = d3.select('#svg3')
-    .attr('width', svgWidth)
-    .attr('height', svgHeight);
+// var svg3 = d3.select('#svg3')
+//     .attr('width', svgWidth)
+//     .attr('height', svgHeight);
 
-var xScale = d3.scaleLinear()
-    .domain([0, d3.max(data)])
-    .range([0, svgWidth]);
+// var xScale = d3.scaleLinear()
+//     .domain([0, d3.max(data)])
+//     .range([0, svgWidth]);
  
-var yScale = d3.scaleLinear()
-    .domain([0, d3.max(data)])
-    .range([svgHeight, 0]);
+// var yScale = d3.scaleLinear()
+//     .domain([0, d3.max(data)])
+//     .range([svgHeight, 0]);
 
-var x_axis = d3.axisBottom().scale(xScale);
+// var x_axis = d3.axisBottom().scale(xScale);
 
-var y_axis = d3.axisLeft().scale(yScale);
+// var y_axis = d3.axisLeft().scale(yScale);
 
-svg3.append('g')
-    .attr('transform', 'translate(50,10)')
-    .call(y_axis);
+// svg3.append('g')
+//     .attr('transform', 'translate(50,10)')
+//     .call(y_axis);
 
- // example 4    
+//  // example 4    
 
-var xAxisTranslate = svgHeight - 20;
+// var xAxisTranslate = svgHeight - 20;
 
-svg3.append('g')
-    .attr('transform', 'translate(50,' + xAxisTranslate +')')
-    .call(x_axis);
+// svg3.append('g')
+//     .attr('transform', 'translate(50,' + xAxisTranslate +')')
+//     .call(x_axis);
 
-    var width = 400,
-        height = 100;
+//     var width = 400,
+//         height = 100;
 
-    var data = [10, 15, 20, 25, 30];
+//     var data = [10, 15, 20, 25, 30];
     
-    // Append SVG 
-    var svg = d3.select('#x-axis')
-                .append("svg")
-                .attr("width", width)
-                .attr("height", height);
+//     // Append SVG 
+//     var svg = d3.select('#x-axis')
+//                 .append("svg")
+//                 .attr("width", width)
+//                 .attr("height", height);
 
-    // Create scale
-    var scale = d3.scaleLinear()
-                  .domain([d3.min(data), d3.max(data)])
-                  .range([0, width - 100]);
+//     // Create scale
+//     var scale = d3.scaleLinear()
+//                   .domain([d3.min(data), d3.max(data)])
+//                   .range([0, width - 100]);
 
-    // Add scales to axis
-    var x_axis = d3.axisBottom()
-                   .scale(scale);
+//     // Add scales to axis
+//     var x_axis = d3.axisBottom()
+//                    .scale(scale);
 
-    //Append group and insert axis
-    svg.append("g")
-       .call(x_axis)
-       .attr("id", "x-axis");
+//     //Append group and insert axis
+//     svg.append("g")
+//        .call(x_axis)
+//        .attr("id", "x-axis");
    
-   // Sets Y-Axis
+//    // Sets Y-Axis
    
-   var width = 400, height = 400;
+//    var width = 400, height = 400;
 
-   var data = [10, 15, 20, 25, 30];
-   var svg = d3.select("#y-axis")
-               .append("svg")
-               .attr("width", width)
-               .attr("height", height);
+//    var data = [10, 15, 20, 25, 30];
+//    var svg = d3.select("#y-axis")
+//                .append("svg")
+//                .attr("width", width)
+//                .attr("height", height);
 
-   var scale = d3.scaleLinear()
-                 .domain([d3.min(data), d3.max(data)])
-                 .range([height/2, 0]);
+//    var scale = d3.scaleLinear()
+//                  .domain([d3.min(data), d3.max(data)])
+//                  .range([height/2, 0]);
 
-   var y_axis = d3.axisLeft()
-                 .scale(scale);
+//    var y_axis = d3.axisLeft()
+//                  .scale(scale);
 
-   svg.append("g")
-      .attr("transform", "translate(50, 10)")
-      .call(y_axis)
-      .attr("id", "y-axis");
+//    svg.append("g")
+//       .attr("transform", "translate(50, 10)")
+//       .call(y_axis)
+//       .attr("id", "y-axis");
+
+  // example 5 
+
+	var width = 400, height = 400;
+	var data = [10, 15, 20, 25, 30];
+	
+	var svg = d3.select("body")
+		.append("svg")
+		.attr("width", width)
+		.attr("height", height);
+
+	var xscale = d3.scaleLinear()
+		.domain([0, d3.max(data)])
+		.range([0, width - 100]);
+
+	var yscale = d3.scaleLinear()
+			.domain([0, d3.max(data)])
+			.range([height/2, 0]);
+
+	var x_axis = d3.axisBottom()
+			.scale(xscale);
+
+	var y_axis = d3.axisLeft()
+			.scale(yscale);
+
+		svg.append("g")
+		   .attr("transform", "translate(50, 10)")
+       .call(y_axis)
+       .attr("id", "y-axis");
+
+	var xAxisTranslate = height/2 + 10;
+
+		svg.append("g")
+				.attr("transform", "translate(50, " + xAxisTranslate  +")")
+        .call(x_axis)
+        .attr("id", "x-axis");
