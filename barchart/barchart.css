@@ -1,0 +1,38 @@
+body{
+  margin: 30px;
+  background-color: #eee;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+h1{
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  font-size: 36px;
+  color: #222;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 500;
+}
+svg{
+  background-color: rgb(0, 0, 255, .5);
+  border-radius: 8px;
+  text-align: center;
+}
+.bar{
+  fill: rgb(0, 0, 0, .7);
+  border: 0;
+}
+.bar:hover{
+  fill: #eee;
+}
+.tooltip{
+  background-color: #eee;
+  color: #222;
+  border-radius: 8px;
+  border: 0;
+  padding: 7px;
+  width: 100px;
+  text-align: center;
+  height: auto;
+}
