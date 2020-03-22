@@ -45,3 +45,8 @@ This repo contains my free code camp certification projects.
 3. Build a personal library [Glitch](https://fcc-is-qa-personal-library-jv.glitch.me)
 4. Build a stock checker [Glitch](https://fcc-stockprice-checker-jv.glitch.me)
 5. Build a Anonymous Message Board [Glitch](https://fcc-is-anonymous-message-board-jv.glitch.me) 
+
+## Data Visualization Projects 
+
+1. Build a Bar Chart [CodePen](https://codepen.io/jpvajda/pen/XWbPKmj)
+2. Build a Scatterplot Graph[CodePen](https://codepen.io/jpvajda/pen/ExjeyNm)
