@@ -49,4 +49,4 @@ This repo contains my free code camp certification projects.
 ## Data Visualization Projects 
 
 1. Build a Bar Chart [CodePen](https://codepen.io/jpvajda/pen/XWbPKmj)
-2. Build a Scatterplot Graph[CodePen](https://codepen.io/jpvajda/pen/ExjeyNm)
+2. Build a Scatterplot Graph [CodePen](https://codepen.io/jpvajda/pen/ExjeyNm)
