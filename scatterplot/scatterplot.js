@@ -1,9 +1,9 @@
-// req=new XMLHttpRequest();
-// req.open("GET",'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json',true);
-// req.send();
-// req.onload=function(){
-//   json=JSON.parse(req.responseText);
-//   var dataset = json.data;
+req=new XMLHttpRequest();
+req.open("GET",'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json',true);
+req.send();
+req.onload=function(){
+  json=JSON.parse(req.responseText);
+  var dataset = json.data;
   
 // Set the dimensions of the canvas / graph
 var margin = {top: 30, right: 20, bottom: 30, left: 50},
@@ -39,7 +39,7 @@ var svg = d3.select("body")
               "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
-d3.csv('./data.csv', function(error, data) {
+d3.json(dataset, function(error, data) {
     data.forEach(function(d) {
         d.date = parseDate(d.date);
         d.close = +d.close;
